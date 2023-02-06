@@ -83,7 +83,10 @@
 
         <main class="py-4">
             @yield('content')
-            {{ $slot }}
+            @isset($slot)
+                {{ $slot }}
+            @endisset
+
         </main>
     </div>
     @livewireScripts
